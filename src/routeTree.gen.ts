@@ -9,32 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ProductsRouteImport } from './routes/المنتجات'
-import { Route as FaqRouteImport } from './routes/الاسئلة'
-import { Route as ContactRouteImport } from './routes/تواصل'
-import { Route as CheckoutRouteImport } from './routes/الطلب'
+import { Route as Char1578Char1608Char1575Char1589Char1604RouteImport } from './routes/تواصل'
+import { Route as Char1575Char1604Char1605Char1606Char1578Char1580Char1575Char1578RouteImport } from './routes/المنتجات'
+import { Route as Char1575Char1604Char1591Char1604Char1576RouteImport } from './routes/الطلب'
+import { Route as Char1575Char1604Char1575Char1587Char1574Char1604Char1577RouteImport } from './routes/الاسئلة'
 import { Route as IndexRouteImport } from './routes/index'
 
-const ProductsRoute = ProductsRouteImport.update({
-  id: '/المنتجات',
-  path: '/المنتجات',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FaqRoute = FaqRouteImport.update({
-  id: '/الاسئلة',
-  path: '/الاسئلة',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/تواصل',
-  path: '/تواصل',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CheckoutRoute = CheckoutRouteImport.update({
-  id: '/الطلب',
-  path: '/الطلب',
-  getParentRoute: () => rootRouteImport,
-} as any)
+const Char1578Char1608Char1575Char1589Char1604Route =
+  Char1578Char1608Char1575Char1589Char1604RouteImport.update({
+    id: '/تواصل',
+    path: '/تواصل',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char1575Char1604Char1605Char1606Char1578Char1580Char1575Char1578Route =
+  Char1575Char1604Char1605Char1606Char1578Char1580Char1575Char1578RouteImport.update(
+    {
+      id: '/المنتجات',
+      path: '/المنتجات',
+      getParentRoute: () => rootRouteImport,
+    } as any,
+  )
+const Char1575Char1604Char1591Char1604Char1576Route =
+  Char1575Char1604Char1591Char1604Char1576RouteImport.update({
+    id: '/الطلب',
+    path: '/الطلب',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char1575Char1604Char1575Char1587Char1574Char1604Char1577Route =
+  Char1575Char1604Char1575Char1587Char1574Char1604Char1577RouteImport.update({
+    id: '/الاسئلة',
+    path: '/الاسئلة',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,70 +49,70 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/الطلب': typeof CheckoutRoute
-  '/تواصل': typeof ContactRoute
-  '/الاسئلة': typeof FaqRoute
-  '/المنتجات': typeof ProductsRoute
+  '/الاسئلة': typeof Char1575Char1604Char1575Char1587Char1574Char1604Char1577Route
+  '/الطلب': typeof Char1575Char1604Char1591Char1604Char1576Route
+  '/المنتجات': typeof Char1575Char1604Char1605Char1606Char1578Char1580Char1575Char1578Route
+  '/تواصل': typeof Char1578Char1608Char1575Char1589Char1604Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/الطلب': typeof CheckoutRoute
-  '/تواصل': typeof ContactRoute
-  '/الاسئلة': typeof FaqRoute
-  '/المنتجات': typeof ProductsRoute
+  '/الاسئلة': typeof Char1575Char1604Char1575Char1587Char1574Char1604Char1577Route
+  '/الطلب': typeof Char1575Char1604Char1591Char1604Char1576Route
+  '/المنتجات': typeof Char1575Char1604Char1605Char1606Char1578Char1580Char1575Char1578Route
+  '/تواصل': typeof Char1578Char1608Char1575Char1589Char1604Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/الطلب': typeof CheckoutRoute
-  '/تواصل': typeof ContactRoute
-  '/الاسئلة': typeof FaqRoute
-  '/المنتجات': typeof ProductsRoute
+  '/الاسئلة': typeof Char1575Char1604Char1575Char1587Char1574Char1604Char1577Route
+  '/الطلب': typeof Char1575Char1604Char1591Char1604Char1576Route
+  '/المنتجات': typeof Char1575Char1604Char1605Char1606Char1578Char1580Char1575Char1578Route
+  '/تواصل': typeof Char1578Char1608Char1575Char1589Char1604Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/الطلب' | '/تواصل' | '/الاسئلة' | '/المنتجات'
+  fullPaths: '/' | '/الاسئلة' | '/الطلب' | '/المنتجات' | '/تواصل'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/الطلب' | '/تواصل' | '/الاسئلة' | '/المنتجات'
-  id: '__root__' | '/' | '/الطلب' | '/تواصل' | '/الاسئلة' | '/المنتجات'
+  to: '/' | '/الاسئلة' | '/الطلب' | '/المنتجات' | '/تواصل'
+  id: '__root__' | '/' | '/الاسئلة' | '/الطلب' | '/المنتجات' | '/تواصل'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  CheckoutRoute: typeof CheckoutRoute
-  ContactRoute: typeof ContactRoute
-  FaqRoute: typeof FaqRoute
-  ProductsRoute: typeof ProductsRoute
+  Char1575Char1604Char1575Char1587Char1574Char1604Char1577Route: typeof Char1575Char1604Char1575Char1587Char1574Char1604Char1577Route
+  Char1575Char1604Char1591Char1604Char1576Route: typeof Char1575Char1604Char1591Char1604Char1576Route
+  Char1575Char1604Char1605Char1606Char1578Char1580Char1575Char1578Route: typeof Char1575Char1604Char1605Char1606Char1578Char1580Char1575Char1578Route
+  Char1578Char1608Char1575Char1589Char1604Route: typeof Char1578Char1608Char1575Char1589Char1604Route
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/المنتجات': {
-      id: '/المنتجات'
-      path: '/المنتجات'
-      fullPath: '/المنتجات'
-      preLoaderRoute: typeof ProductsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/الاسئلة': {
-      id: '/الاسئلة'
-      path: '/الاسئلة'
-      fullPath: '/الاسئلة'
-      preLoaderRoute: typeof FaqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/تواصل': {
       id: '/تواصل'
       path: '/تواصل'
       fullPath: '/تواصل'
-      preLoaderRoute: typeof ContactRouteImport
+      preLoaderRoute: typeof Char1578Char1608Char1575Char1589Char1604RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/المنتجات': {
+      id: '/المنتجات'
+      path: '/المنتجات'
+      fullPath: '/المنتجات'
+      preLoaderRoute: typeof Char1575Char1604Char1605Char1606Char1578Char1580Char1575Char1578RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/الطلب': {
       id: '/الطلب'
       path: '/الطلب'
       fullPath: '/الطلب'
-      preLoaderRoute: typeof CheckoutRouteImport
+      preLoaderRoute: typeof Char1575Char1604Char1591Char1604Char1576RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/الاسئلة': {
+      id: '/الاسئلة'
+      path: '/الاسئلة'
+      fullPath: '/الاسئلة'
+      preLoaderRoute: typeof Char1575Char1604Char1575Char1587Char1574Char1604Char1577RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -121,21 +127,15 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  CheckoutRoute: CheckoutRoute,
-  ContactRoute: ContactRoute,
-  FaqRoute: FaqRoute,
-  ProductsRoute: ProductsRoute,
+  Char1575Char1604Char1575Char1587Char1574Char1604Char1577Route:
+    Char1575Char1604Char1575Char1587Char1574Char1604Char1577Route,
+  Char1575Char1604Char1591Char1604Char1576Route:
+    Char1575Char1604Char1591Char1604Char1576Route,
+  Char1575Char1604Char1605Char1606Char1578Char1580Char1575Char1578Route:
+    Char1575Char1604Char1605Char1606Char1578Char1580Char1575Char1578Route,
+  Char1578Char1608Char1575Char1589Char1604Route:
+    Char1578Char1608Char1575Char1589Char1604Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
