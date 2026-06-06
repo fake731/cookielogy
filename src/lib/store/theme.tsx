@@ -4,11 +4,10 @@ type ThemeCtx = { dark: boolean; toggle: () => void };
 const Ctx = createContext<ThemeCtx | null>(null);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
   useEffect(() => {
     const stored = typeof window !== "undefined" ? localStorage.getItem("cl_theme") : null;
-    const prefers = typeof window !== "undefined" && window.matchMedia?.("(prefers-color-scheme: dark)").matches;
-    setDark(stored ? stored === "dark" : !!prefers);
+    setDark(stored ? stored === "dark" : true);
   }, []);
   useEffect(() => {
     if (typeof document === "undefined") return;

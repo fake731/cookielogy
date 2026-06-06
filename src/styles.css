@@ -35,8 +35,8 @@
   --color-cocoa: var(--cocoa);
   --color-marble: var(--marble);
 
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-sans: "Cairo", "Inter", system-ui, sans-serif;
+  --font-display: "El Messiri", "Playfair Display", Georgia, serif;
+  --font-sans: "Tajawal", "Cairo", "Inter", system-ui, sans-serif;
 
   --shadow-luxe: 0 30px 80px -30px color-mix(in oklab, var(--primary) 40%, transparent);
   --shadow-card: 0 10px 40px -12px color-mix(in oklab, var(--cocoa) 25%, transparent);

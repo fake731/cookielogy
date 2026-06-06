@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Instagram, MessageCircle, Phone } from "lucide-react";
+import { Instagram, MessageCircle } from "lucide-react";
 import { DISPLAY_PHONE, INSTAGRAM_URL, WHATSAPP_NUMBER } from "@/lib/store/products";
 
-export const Route = createFileRoute("/contact")({
+export const Route = createFileRoute("/تواصل")({
   head: () => ({
     meta: [
-      { title: "Contact · Cookielogy Lab" },
-      { name: "description", content: "Get in touch with Cookielogy Lab via WhatsApp or Instagram." },
+      { title: "تواصل معنا · كوكيلوجي" },
+      { name: "description", content: "تواصل معنا عبر واتساب أو انستغرام." },
     ],
   }),
   component: Contact,
@@ -14,9 +14,8 @@ export const Route = createFileRoute("/contact")({
 
 function Contact() {
   const cards = [
-    { icon: MessageCircle, label: "WhatsApp", value: DISPLAY_PHONE, href: `https://wa.me/${WHATSAPP_NUMBER}` },
-    { icon: Instagram, label: "Instagram", value: "@cooki.elogy", href: INSTAGRAM_URL },
-    { icon: Phone, label: "Phone", value: DISPLAY_PHONE, href: `tel:+${WHATSAPP_NUMBER}` },
+    { icon: MessageCircle, label: "واتساب", value: DISPLAY_PHONE, href: `https://wa.me/${WHATSAPP_NUMBER}` },
+    { icon: Instagram, label: "انستغرام", value: "@cooki.elogy", href: INSTAGRAM_URL },
   ];
   return (
     <section className="container mx-auto px-4 py-20 max-w-4xl">
@@ -25,7 +24,7 @@ function Contact() {
         <h1 className="font-display text-5xl font-bold mt-2 text-gradient-primary">تواصل معنا</h1>
         <p className="text-muted-foreground mt-3">نحن هنا للإجابة على أسئلتك ولاستقبال طلباتك الخاصة.</p>
       </div>
-      <div className="grid sm:grid-cols-3 gap-5">
+      <div className="grid sm:grid-cols-2 gap-5 max-w-xl mx-auto">
         {cards.map((c) => (
           <a
             key={c.label}
