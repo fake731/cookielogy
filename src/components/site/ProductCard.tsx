@@ -15,19 +15,19 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
       <div className="relative aspect-square overflow-hidden bg-muted">
         <img
           src={product.image}
-          alt={product.name}
+          alt={product.nameAr}
           loading="lazy"
           width={768}
           height={768}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-background/80 backdrop-blur text-xs font-bold text-primary">
-          {product.price.toFixed(2)} JD
+        <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-background/80 backdrop-blur text-xs font-bold text-primary">
+          {product.price.toFixed(2)} د.أ
         </div>
       </div>
       <div className="p-5">
-        <h3 className="font-display text-lg font-bold leading-tight">{product.name}</h3>
-        <p className="text-xs text-muted-foreground mt-0.5" dir="rtl">{product.nameAr}</p>
+        <h3 className="font-display text-lg font-bold leading-tight">{product.nameAr}</h3>
+        <p className="text-xs text-muted-foreground mt-0.5">{product.name}</p>
         <p className="text-sm text-muted-foreground mt-2 line-clamp-2 min-h-10">{product.desc}</p>
 
         <div className="mt-4 flex items-center gap-3">
@@ -35,7 +35,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
             <button
               onClick={() => setQty((q) => Math.max(1, q - 1))}
               className="h-8 w-8 grid place-items-center hover:text-primary"
-              aria-label="Decrease"
+              aria-label="إنقاص"
             >
               <Minus className="h-3 w-3" />
             </button>
@@ -43,7 +43,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
             <button
               onClick={() => setQty((q) => q + 1)}
               className="h-8 w-8 grid place-items-center hover:text-primary"
-              aria-label="Increase"
+              aria-label="زيادة"
             >
               <Plus className="h-3 w-3" />
             </button>
@@ -53,7 +53,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
             className="flex-1 inline-flex items-center justify-center gap-1.5 h-9 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:bg-[var(--cocoa)] transition-colors"
           >
             <ShoppingBag className="h-3.5 w-3.5" />
-            Add to cart
+            أضف إلى السلة
           </button>
         </div>
       </div>
