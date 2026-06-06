@@ -4,7 +4,7 @@ import { useCart } from "@/lib/store/cart";
 import { DELIVERY_FEE, WHATSAPP_NUMBER } from "@/lib/store/products";
 import { MessageCircle } from "lucide-react";
 
-export const Route = createFileRoute("/checkout")({
+export const Route = createFileRoute("/الطلب")({
   head: () => ({
     meta: [
       { title: "Checkout · Cookielogy Lab" },

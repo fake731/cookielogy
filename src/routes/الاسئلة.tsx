@@ -1,21 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { WHATSAPP_NUMBER, DISPLAY_PHONE } from "@/lib/store/products";
 
 export const Route = createFileRoute("/الاسئلة")({
   head: () => ({
     meta: [
-      { title: "FAQ · Cookielogy Lab" },
-      { name: "description", content: "Frequently asked questions about ordering, delivery, and our cookies." },
+      { title: "الأسئلة الشائعة · كوكيلوجي" },
+      { name: "description", content: "أسئلة شائعة حول الطلب والتوصيل والمنتجات." },
     ],
   }),
   component: FAQ,
 });
 
 const QA = [
-  { q: "كم مدة التوصيل؟", a: "التوصيل خلال يومين عمل لجميع أنحاء المملكة الأردنية الهاشمية." },
-  { q: "كم رسوم التوصيل؟", a: "رسوم التوصيل ثابتة 2 د.أ لكل الطلبات داخل الأردن." },
-  { q: "كيف أطلب؟", a: "أضف منتجاتك للسلة، انتقل لصفحة إتمام الطلب، وسيتم تأكيد الطلب عبر واتساب." },
+  {
+    q: "كم تكلفة التوصيل؟",
+    a: "التوصيل بنفس اليوم: 3 دنانير أردنية. التوصيل خلال يومين: ديناران أردنيان (2 د.أ).",
+  },
+  { q: "كم مدة التوصيل؟", a: "نوصل لجميع أنحاء المملكة الأردنية الهاشمية 🇯🇴 خلال يوم أو يومين عمل حسب الخيار الذي تختاره." },
+  { q: "كيف أطلب؟", a: "أضف منتجاتك للسلة، انتقل لصفحة إتمام الطلب، وسيتم تأكيد الطلب عبر واتساب مباشرة." },
   { q: "هل الكوكيز طازج؟", a: "نعم، يتم تحضير جميع منتجاتنا يومياً بمكونات عالية الجودة." },
-  { q: "هل يمكنني تخصيص بوكس؟", a: "تواصل معنا عبر واتساب على 0796032909 وسنرتب لك طلبك الخاص." },
+  { q: "هل يمكنني تخصيص بوكس؟", a: "بالتأكيد! تواصل معنا عبر واتساب وسنرتب لك طلبك الخاص." },
 ];
 
 function FAQ() {
@@ -35,7 +39,22 @@ function FAQ() {
               <span>{item.q}</span>
               <span className="h-7 w-7 grid place-items-center rounded-full bg-primary/10 text-primary group-open:rotate-45 transition-transform">+</span>
             </summary>
-            <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{item.a}</p>
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+              {item.a}
+              {item.q.includes("تخصيص") && (
+                <>
+                  {" "}
+                  <a
+                    href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary font-semibold underline"
+                  >
+                    {DISPLAY_PHONE}
+                  </a>
+                </>
+              )}
+            </p>
           </details>
         ))}
       </div>

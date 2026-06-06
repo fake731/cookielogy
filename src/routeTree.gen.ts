@@ -9,30 +9,30 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as MenuRouteImport } from './routes/menu'
-import { Route as FaqRouteImport } from './routes/faq'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as ProductsRouteImport } from './routes/المنتجات'
+import { Route as FaqRouteImport } from './routes/الاسئلة'
+import { Route as ContactRouteImport } from './routes/تواصل'
+import { Route as CheckoutRouteImport } from './routes/الطلب'
 import { Route as IndexRouteImport } from './routes/index'
 
-const MenuRoute = MenuRouteImport.update({
-  id: '/menu',
-  path: '/menu',
+const ProductsRoute = ProductsRouteImport.update({
+  id: '/المنتجات',
+  path: '/المنتجات',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FaqRoute = FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
+  id: '/الاسئلة',
+  path: '/الاسئلة',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
+  id: '/تواصل',
+  path: '/تواصل',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CheckoutRoute = CheckoutRouteImport.update({
-  id: '/checkout',
-  path: '/checkout',
+  id: '/الطلب',
+  path: '/الطلب',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -43,32 +43,32 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/checkout': typeof CheckoutRoute
-  '/contact': typeof ContactRoute
-  '/faq': typeof FaqRoute
-  '/menu': typeof MenuRoute
+  '/الطلب': typeof CheckoutRoute
+  '/تواصل': typeof ContactRoute
+  '/الاسئلة': typeof FaqRoute
+  '/المنتجات': typeof ProductsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/checkout': typeof CheckoutRoute
-  '/contact': typeof ContactRoute
-  '/faq': typeof FaqRoute
-  '/menu': typeof MenuRoute
+  '/الطلب': typeof CheckoutRoute
+  '/تواصل': typeof ContactRoute
+  '/الاسئلة': typeof FaqRoute
+  '/المنتجات': typeof ProductsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/checkout': typeof CheckoutRoute
-  '/contact': typeof ContactRoute
-  '/faq': typeof FaqRoute
-  '/menu': typeof MenuRoute
+  '/الطلب': typeof CheckoutRoute
+  '/تواصل': typeof ContactRoute
+  '/الاسئلة': typeof FaqRoute
+  '/المنتجات': typeof ProductsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/checkout' | '/contact' | '/faq' | '/menu'
+  fullPaths: '/' | '/الطلب' | '/تواصل' | '/الاسئلة' | '/المنتجات'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/checkout' | '/contact' | '/faq' | '/menu'
-  id: '__root__' | '/' | '/checkout' | '/contact' | '/faq' | '/menu'
+  to: '/' | '/الطلب' | '/تواصل' | '/الاسئلة' | '/المنتجات'
+  id: '__root__' | '/' | '/الطلب' | '/تواصل' | '/الاسئلة' | '/المنتجات'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,36 +76,36 @@ export interface RootRouteChildren {
   CheckoutRoute: typeof CheckoutRoute
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
-  MenuRoute: typeof MenuRoute
+  ProductsRoute: typeof ProductsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/menu': {
-      id: '/menu'
-      path: '/menu'
-      fullPath: '/menu'
-      preLoaderRoute: typeof MenuRouteImport
+    '/المنتجات': {
+      id: '/المنتجات'
+      path: '/المنتجات'
+      fullPath: '/المنتجات'
+      preLoaderRoute: typeof ProductsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
+    '/الاسئلة': {
+      id: '/الاسئلة'
+      path: '/الاسئلة'
+      fullPath: '/الاسئلة'
       preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
+    '/تواصل': {
+      id: '/تواصل'
+      path: '/تواصل'
+      fullPath: '/تواصل'
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/checkout': {
-      id: '/checkout'
-      path: '/checkout'
-      fullPath: '/checkout'
+    '/الطلب': {
+      id: '/الطلب'
+      path: '/الطلب'
+      fullPath: '/الطلب'
       preLoaderRoute: typeof CheckoutRouteImport
       parentRoute: typeof rootRouteImport
     }
@@ -124,7 +124,7 @@ const rootRouteChildren: RootRouteChildren = {
   CheckoutRoute: CheckoutRoute,
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
-  MenuRoute: MenuRoute,
+  ProductsRoute: ProductsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
