@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/faq")({
+export const Route = createFileRoute("/الاسئلة")({
   head: () => ({
     meta: [
       { title: "FAQ · Cookielogy Lab" },

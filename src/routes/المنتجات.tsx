@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Menu } from "@/components/site/Menu";
 
-export const Route = createFileRoute("/menu")({
+export const Route = createFileRoute("/المنتجات")({
   head: () => ({
     meta: [
       { title: "Menu · Cookielogy Lab" },
