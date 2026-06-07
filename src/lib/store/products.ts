@@ -29,9 +29,9 @@ export type Product = {
 
 export const PRODUCTS: Product[] = [
   // Cookies
-  { id: "classic", name: "Classic", nameAr: "كلاسيك", desc: "كوكيز كلاسيكي مع قطع شوكولاتة ذائبة — توقيعنا الأصلي.", price: 0.75, image: classic, category: "cookies" },
+  { id: "classic", name: "Classic", nameAr: "كلاسيك", desc: "كوكيز كلاسيكي مع قطع شوكولاتة ذائبة .", price: 0.75, image: classic, category: "cookies" },
   { id: "lotus", name: "Lotus Biscoff", nameAr: "لوتس بيسكوف", desc: "كوكيز طري مع كريمة لوتس بيسكوف الكراميلية.", price: 0.90, image: lotus, category: "cookies" },
-  { id: "pistachio", name: "Pistachio", nameAr: "فستق حلبي", desc: "كوكيز بزبدة فاخرة مع فستق حلبي مجروش.", price: 0.90, image: pistachio, category: "cookies" },
+  { id: "pistachio", name: "Pistachio", nameAr: "فستق حلبي", desc: "كوكيز بزبدة مع فستق حلبي مجروش.", price: 0.90, image: pistachio, category: "cookies" },
   { id: "kinder", name: "Kinder Bueno", nameAr: "كيندر بوينو", desc: "محشو ومحمّل بقطع كيندر بوينو.", price: 0.90, image: kinder, category: "cookies" },
   { id: "redvelvet", name: "Red Velvet Cream Cheese", nameAr: "ريد فلفت بكريمة الجبنة", desc: "ريد فلفت غني مع تزيين كريمة الجبنة البيضاء.", price: 0.90, image: redvelvet, category: "cookies" },
 

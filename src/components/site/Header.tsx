@@ -25,7 +25,7 @@ export function Header() {
           <img src={logo} alt="كوكيلوجي" className="h-12 w-12 transition-transform group-hover:rotate-6" />
           <div className="leading-tight">
             <div className="font-display text-lg font-bold text-gradient-primary">COOKIELOGY</div>
-            <div className="text-[10px] tracking-[0.25em] text-muted-foreground">مختبر الكوكيز الفاخر</div>
+            <div className="text-[10px] tracking-[0.25em] text-muted-foreground">متجر الكوكيز</div>
           </div>
         </Link>
 

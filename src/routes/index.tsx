@@ -29,7 +29,7 @@ function Home() {
             </span>
             <h1 className="font-display text-5xl md:text-7xl xl:text-8xl font-bold leading-[0.95] tracking-tight">
               <span className="block text-gradient-primary">COOKIELOGY</span>
-              <span className="block text-foreground/90 text-3xl md:text-4xl mt-2">مختبر الكوكيز الفاخر</span>
+              <span className="block text-foreground/90 text-3xl md:text-4xl mt-2">متجر الكوكيز</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
               نكهات مبتكرة ومكونات عالية الجودة <span className="inline-block animate-float-slow">🍪</span>
