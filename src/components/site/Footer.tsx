@@ -9,7 +9,7 @@ export function Footer() {
         <div>
           <div className="font-display text-2xl font-bold text-gradient-primary">COOKIELOGY</div>
           <p className="mt-3 text-sm text-muted-foreground max-w-xs">
-            مختبر الكوكيز الفاخر. نكهات مبتكرة ومكونات عالية الجودة تُحضَّر يومياً.
+            متجر الكوكيز. نكهات مبتكرة ومكونات عالية الجودة تُحضَّر يومياً 🍪
           </p>
         </div>
         <div>
